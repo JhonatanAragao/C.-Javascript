@@ -192,6 +192,7 @@ console.log(b);
 
 
 //testando commit
+//o commit está ok
 
 
 
