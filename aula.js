@@ -177,26 +177,120 @@
 
 //**TROCANDO VALORES DE VARIÁVEIS */
 
-let a = 'lasanha';
-let b = 'carne de sol';
+// let a = 'lasanha';
+// let b = 'carne de sol';
 
-let c  = a;
-a = b;
-b = c;
+// let c  = a;
+// a = b;
+// b = c;
 
-console.log(a);
-console.log(b);
+// console.log(a);
+// console.log(b);
+
+//CONDICIONAIS
+
+//IF..ELSE
+
+//if (condicao){
+  // codigo a ser executado}
+
+//else if(condicao) {
+  //codigo a ser executado}
+
+  //EXEMPLO: Se a hora estiver entre 6:00 até 12:00 : Bom dia!
+  //  Se estiver entre 12:00 e 18:00 : Boa tarde!
+  //Caso contrário : Boa noite!
+
+// let hora = 19;
+// if (hora > 6 && hora <= 12){
+//   console.log('Bom dia!');
+// }
+// else if (hora > 12 && hora < 18){
+//   console.log('Boa tarde!');
+// }
+// else {
+//   console.log('Boa noite!');
+// }
+
+
+//SWITH..CASE
+
+// let permissao; //comum, gerente, diretor
+// permissao = '1'
+// switch (permissao) {
+//   case '1' :
+//      console.log('Usuário Comum');
+//   break;
+
+//   case '3' :
+//      console.log('Usuário Gerente');
+//   break;
+
+//   case '2' :
+//      console.log('Usuário Diretor');
+//   break;
+
+//   default : console.log('Usuário não identificado!')
+// }
+
+
+//LAÇO DE REPETIÇÃO (LOOPS)
+
+//1.FOR
+
+//for (let i = 1; i <= 5; i++) {
+ // console.log('Estou aprendendo',i);
+//}
+
+//2.WHILE
+//3. DO..WHILE
+//4. FOR..IN
+//5. FOR..OF
+
+
+//**EXERCICIO */
+//**ESCREVA UMA FUNÇÃO QUE USA 2 NÚMEROS E RETORNA O MAIOR ENTRE ELES */
+
+  // function maiorNumero (numero1,numero2){
+  //   if (numero1 > numero2) return numero1; //ou {console.log(numero1)}
+  //   else return numero2 //ou console.log(numero2)
+  // } 
+  // let max = maiorNumero(9.9999999,9.9999999999999);
+  // console.log(max)
+
+  //também podemos realizar este exercicio utilizando o aprendizado do operador ternário
+  //que aprendemos anteriormente!
+
+//  function numeroMaior (numero3,numero4){
+//    return numero3 > numero4 ? numero3 : numero4;
+//  } 
+//  let max = numeroMaior(7,44);
+//  console.log(max);
 
 
 
 
+//**FIZZ BUZZ */
+//Irá comparar alguns valores e retornar um valor baseado no valor de entrada.
+//Divisível por 3 => Fizz
+//Divisível por 5 => Buzz
+//Divisível por 3 e 5 => FizzBuzz
 
-//testando commit
-//o commit está ok
+const hoje =  fizzBuzz(9);
+console.log(hoje);
+
+function fizzBuzz(entrada){
+  if (entrada % 3 ===0 && entrada % 5 ===0)
+  return 'FizzBuzz';
+  if ( typeof entrada !== 'number')
+  return 'Não é um número';;
+  if (entrada % 3 ===0)
+  return 'Fizz';
+  if (entrada % 5 ===0)
+  return 'Buzz';
+}
 
 
 
-
-
-//PAREI EM 1:08
+//PAREI EM 1:46
 //https://youtu.be/i6Oi-YtXnAU
