@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--<script type="text/javascript" src="/condicoes parte1.js"></script>-->
+    <style>
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1><i><u>Condições no Javascript</u></i></h1>
+    Velocidade do carro: <input type="number" name="txtvel" id="txtvel"> Km/h 
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="resultado">
+
+    </div>
+    <script>
+      
+      function calcular(){
+          var txtv = document.getElementById("txtvel")
+          var velocidade = Number(txtv.value)
+          var resultado = document.getElementById("resultado")
+          resultado.innerHTML = `<p>Sua velocidade atual é de ${velocidade}Km/h</p>`
+          if (velocidade > 60) {
+              resultado.innerHTML += "<p>VOCÊ FOI MULTADO!!!</p>"
+          }
+          resultado.innerHTML += "<p>Dirija sempre usando cinto de segurança!</p>"
+
+      }
+    </script>
+
+    <!--condições aninhadas-->
+    <br></br><br></br>
+    <h1><i><u>Condições aninhadas</u></i></h1>
+    Digite sua idade: <input type="number" nome="txtidade" id="txtidade">
+    <input type="button" value="Verificar" onclick="verifc()">
+    <div id="resultado2"></div>
+
+    <script>
+        function verifc(){
+            var valorIdadeUsuario = document.getElementById("txtidade");
+            var idadeUsuario = Number(valorIdadeUsuario.value);
+            var resultado2 = document.getElementById("resultado2");
+            resultado2.innerHTML = (`Sua idade é ${idadeUsuario} anos.`);
+            if(idadeUsuario < 16) {
+                resultado2.innerHTML += (" Não vota!");
+            } else if (idadeUsuario < 18) {
+                resultado2.innerHTML += (" Voto opcional!");
+            } else if (idadeUsuario >= 65) {
+                resultado2.innerHTML += (" Voto opcional!");
+            } else {
+                resultado2.innerHTML += (" Voto obrigatório!");
+            }
+
+        }
+    </script>
+    
+</body>
+</html>
