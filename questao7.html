@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatizar Fábrica</title>
+</head>
+<body>
+    <script>
+       var temp_sensor = parseInt(365); 
+       var motor_auxiliar = Boolean(0);
+       var motor_res_A = Boolean(0);
+       var motor_res_B = Boolean(0);
+       var casoIdeal = Boolean(0);
+       var casoAnormal = Boolean(0);
+       var luz_vermelha = Boolean(0);
+       var escolha_producao = "";
+
+       if  (temp_sensor > 339 && temp_sensor < 361){
+            casoIdeal = true;
+       } else {
+            casoAnormal = true;
+       };
+       while(casoAnormal = false){
+            motor_res_A = false;
+            motor_res_B = false;
+            motor_auxiliar = false;
+            document.write(`Temperatura do forno ${temp_sensor}°C <br>Funcionamento normal!`);
+            break;
+       }
+       if (temp_sensor < 340){
+           luz_vermelha = true;
+           motor_auxiliar = true;
+           document.write(`Temperatura do forno ${temp_sensor}°C <br>Temperatura baixa no forno.<br>Ligando Motor auxiliar!`);
+           
+       } else if (temp_sensor > 360){
+           escolha_producao = prompt("Escolha qual o tipo de produção:\n1- Peças de sanitários\n2- Piso cerâmico");
+           switch (escolha_producao){
+               case "1": 
+                    luz_vermelha = true;
+                    motor_res_A = true;
+                    document.write("Motor de sopro ligado!");
+                    break;
+                case "2":
+                    motor_res_B = true;
+                    document.write("Motor de equilíbrio ligado!");
+                    break;
+                default:
+                    document.write("Nenhum motor foi ligado.");
+           }
+       } else {
+        document.write(`Temperatura do forno ${temp_sensor}°C <br>Funcionamento normal!`);
+       }
+    </script>
+</body>
+</html>

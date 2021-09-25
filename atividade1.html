@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividades</title>
+</head>
+<body>
+    <h1>Atividade 01: Escolher  entre uva ou banana</h1>
+    <script>
+         var fruta = prompt("Escolha entre essas duas frutas: uva ou banana? ");
+         if (fruta  == "uva" || "Uva") {
+             document.write("Essa fruta é roxa!");
+         } 
+         else if (fruta == "banana" || "Banana") {
+             document.write("Essa fruta é amarela!");
+         } else {
+             document.write("OPS... Você não escolheu nenhuma das opções definidas!");
+         };
+    </script>
+     <br></br>
+
+    <h1>Atividade 2: Contador 1 a 10</h1>
+    <script>
+        for (contador = 1; contador <=10; contador++) {
+            document.write("<br>"+contador)
+        }; //contando de 1 a 10.
+       
+
+        for (contador2 = 10; contador2 >= 1; contador2--) {
+            document.write("<br>"+contador2)
+        }; //contando de 10 a 1.   
+    </script>
+    <br></br>
+
+    <h1>Atividade 3: Notas acadêmicas</h1>
+    <script>
+        var nota1 = Number(prompt("Aluno, digite sua primeira nota: "));
+        var nota2 = Number(prompt("Agora digite a segunda nota: "));
+        var nota3 = Number(prompt("Ótimo, por fim, digite a terceira nota: "));
+        var res1 = 0;
+        var res2 = 0;
+        var res3 = 0;
+        //Condições para nota 1
+        if (nota1 > 10) {
+           document.write("Ops... Digite uma nota válida! <br>");
+        } else if (nota1 >= 7) { 
+            document.write("Aprovado. <br>");
+            var res1 = 1
+        } else if (nota1 >= 4) {
+            document.write("Recuperação. <br>");
+        } else {
+            document.write("Reprovado. <br>");
+        };
+        
+        //Condições para nota 2
+        if (nota2 > 10) {
+           document.write("Ops... Digite uma nota válida! <br>");
+        } else if (nota2 >= 7) { 
+            document.write("Aprovado. <br>");
+            var res2 = 1;
+        } else if (nota2 >= 4) {
+            document.write("Recuperação. <br>");
+        } else {
+            document.write("Reprovado. <br>");
+        };  
+       
+        //Condições para nota 3
+        if (nota3 > 10) {
+           document.write("Ops... Digite uma nota válida! <br>");
+        } else if (nota3 >= 7) { 
+            document.write("Aprovado. <br>");
+            var res3 = 1;
+        } else if (nota3 >= 4) {
+            document.write("Recuperação. <br>");
+        } else {
+            document.write("Reprovado. <br>");
+        };  
+        
+        if (res1 && res2 && res3 == true) {
+            document.write("<br><br> PARABÉNS!!! Você conseguiu aprovação em todas as notas.");
+        };
+    </script>
+
+</body>
+</html>
