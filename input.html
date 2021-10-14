@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador numérico</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        #area {
+            font: normal;
+            background-color: rgb(42, 139, 42);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+        #resultado {
+            font: normal;
+            background-color: rgb(40, 32, 165);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contador numerico</h1>
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">Interaja</div>
+    <div id="resultado">resultado</div>
+
+    <script>
+        function clicar () {
+            var area = window.document.querySelector("#area");
+            area.innerHTML = "somou" 
+        }
+        function entrar(){
+            var valor = 20 
+            var adc = 18
+            var result = document.getElementById('resultado').innerHTML = valor + adc;
+
+        }
+        function sair(){
+            adc = 18;
+            result = document.getElementById('resultado').innerHTML = result + adc;
+        }
+    </script>
+</body>
+</html>

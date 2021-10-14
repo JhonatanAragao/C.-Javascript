@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inner HTML</title>
+    <style>
+        body {
+            background-color: aquamarine;
+        }
+        h1 {
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            
+        }
+        #horaatual {
+            font-size: 24pt;
+            font-weight: 1000;
+            text-align: center;
+        }
+        #bemvindo {
+            margin-top: 40px;
+            font-size: 30pt;
+        }
+        #escolha {
+            width: 200px;
+            height: 50px;
+            font-size: large;
+        }
+        #botao{
+            width: 100px;
+            height: 50px;
+            font-family:Verdana, Geneva, Tahoma, sans-serif ;
+            font-style: italic;
+            background-color: brown;
+            color: white;
+            
+        }
+        fieldset {
+            background-color: blue;
+            color: white;
+        }
+        #pergunta {
+            font-size: 18pt;
+        }
+        #topicos {
+            font-size: 14pt;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <h1><u>Testando inner html</u></h1>
+    <div id="horaatual"></div>
+    </fieldset>
+    
+    <p id="pergunta"><b>Qual seu gênero?</b></p>
+    <div id="topicos">
+        <p>1 - Masculino</p>
+        <p>2 - Feminino</p>
+    </div>
+    <input type="number" placeholder="digite 1 ou 2" name="escolha" id="escolha">
+    <button id="botao" onclick="genero()"><b>Escolher</b></button>
+    <div id="bemvindo"></div>
+    
+    <script>
+        var colocar_hora = new Date();
+        var hora = colocar_hora.getHours();
+        var minutos = colocar_hora.getMinutes();
+        var hora_atual = (`${hora}h${minutos}<br>`);
+        document.querySelector("#horaatual").innerHTML = hora_atual;
+
+        function genero(){
+            var escolha = Number(document.getElementById("escolha").value);
+            var resultado = document.getElementById('bemvindo');
+            switch (escolha){
+                case 1:
+                    resultado.innerHTML = ("Seja bem vindo!");
+                    break;
+                case 2: 
+                    bemvindo.innerHTML = ("Seja bem vinda!");
+                    break;
+                default: 
+                    bemvindo.innerHTML = ("Voce nao escolheu uma opção correta!");
+            }
+            document.getElementById('escolha').value = '';
+        }
+
+
+        
+    </script>
+</body>
+</html>
