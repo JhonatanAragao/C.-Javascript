@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteio em listas</title>
+    <style>
+        #frase{
+            width: 280px;
+        }
+        #palavraescolhida{
+            margin-bottom: 20px;
+            font-size: 18pt;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Aleatoriedade</h1>
+    <input type="text" placeholder="Digite uma palavra para
+ saber o seu tamanho" id="frase">
+    <button type="button" onclick="tamanho()">Ver resultado</button>
+    <p><fieldset>
+        <div id="palavraescolhida"></div>
+        <normal>Essa palavra possuí:</normal><div id="result"></div>
+    </fieldset></p>
+
+    <script>
+        
+
+        function tamanho(){
+            let palavra = document.querySelector("#frase").value;
+            let resultado = document.querySelector("#result");
+            let palavrasEsco = document.querySelector("#palavraescolhida");
+            palavrasEsco.innerHTML = palavra;
+            resultado.innerHTML = (`${palavra.length} letras!`);
+            palavra = document.querySelector("#frase").value = "";
+        }
+        //let palavra = 'cachorro';
+        //document.write(palavra.length)
+    </script>
+</body>
+</html>
