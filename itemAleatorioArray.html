@@ -6,39 +6,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sorteio em listas</title>
     <style>
-        #frase{
-            width: 280px;
-        }
-        #palavraescolhida{
-            margin-bottom: 20px;
-            font-size: 18pt;
-            font-style: italic;
+        #inserirnomes {
+            width: 200px;
         }
     </style>
+
 </head>
 <body>
     <h1 style="text-align: center;">Aleatoriedade</h1>
-    <input type="text" placeholder="Digite uma palavra para
- saber o seu tamanho" id="frase">
-    <button type="button" onclick="tamanho()">Ver resultado</button>
-    <p><fieldset>
-        <div id="palavraescolhida"></div>
-        <normal>Essa palavra possuí:</normal><div id="result"></div>
-    </fieldset></p>
+    <input type="text" placeholder="Digite um nome de invocador" id="nome" onfocus="this.value='';">
+    <button type="button" onclick="adicionar()">Enviar</button>
+    <button type="button" onclick="sorteioA()">Sortear time A</button>
+
+    <div class="exibir">
+        <ul id="lista"></ul>
+    </div>
+    <table border="1">
+        <tr>
+            <th>Time A</th>
+            <th>Time B</th>
+        </tr>
+        <tr>
+            <td id="linha1"></td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+    </table>
+    
 
     <script>
-        
-
-        function tamanho(){
-            let palavra = document.querySelector("#frase").value;
-            let resultado = document.querySelector("#result");
-            let palavrasEsco = document.querySelector("#palavraescolhida");
-            palavrasEsco.innerHTML = palavra;
-            resultado.innerHTML = (`${palavra.length} letras!`);
-            palavra = document.querySelector("#frase").value = "";
+        let nomes = [];
+        for (var i = 0; i < nomes.length; i++) {
+             var lis = document.createElement('li');
+             lis.innerHTML = nomes[i];
+             lista.appendChild(lis);
         }
-        //let palavra = 'cachorro';
-        //document.write(palavra.length)
+
+        //função para adicionar mais um nome à lista
+        function adicionar() {
+             var coleta = document.getElementById("nome").value;
+             var nomeDig = document.createElement('li');
+
+             nomes.push(coleta);
+             nomeDig.innerHTML = coleta;
+             lista.appendChild(nomeDig);
+             
+        }
+        function sorteioA(){
+            let nomesort = String(Math.floor(Math.random() * nomes.length));
+            let nomeadc = document.getElementById("linha1");
+            nomeadc.innerHTML = (nomes[nomesort.value]);
+            
+            
+        }
+        
+        
     </script>
+
+
+<script>
+    //let numeros = new Array ();
+        //numeros = [10,20,30,40];
+        //let numeroAleatorio = Math.floor(Math.random() * numeros.length);
+        //document.write(numeros[numeroAleatorio]);
+</script>
 </body>
 </html>
