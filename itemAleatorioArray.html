@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteio em listas</title>
+    <style>
+        #inserirnomes {
+            width: 200px;
+        }
+    </style>
+
+</head>
+<body>
+    <h1 style="text-align: center;">Aleatoriedade</h1>
+    <input type="text" placeholder="Digite um nome de invocador" id="nome" onfocus="this.value='';">
+    <button type="button" onclick="adicionar()">Enviar</button>
+    <button type="button" onclick="sorteioA()">Sortear time A</button>
+
+    <div class="exibir">
+        <ul id="lista"></ul>
+    </div>
+    <table border="1">
+        <tr>
+            <th>Time A</th>
+            <th>Time B</th>
+        </tr>
+        <tr>
+            <td id="linha1"></td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+    </table>
+    
+
+    <script>
+        let nomes = [];
+        for (var i = 0; i < nomes.length; i++) {
+             var lis = document.createElement('li');
+             lis.innerHTML = nomes[i];
+             lista.appendChild(lis);
+        }
+
+        //função para adicionar mais um nome à lista
+        function adicionar() {
+             var coleta = document.getElementById("nome").value;
+             var nomeDig = document.createElement('li');
+
+             nomes.push(coleta);
+             nomeDig.innerHTML = coleta;
+             lista.appendChild(nomeDig);
+             
+        }
+        function sorteioA(){
+            let nomesort = String(Math.floor(Math.random() * nomes.length));
+            let nomeadc = document.getElementById("linha1");
+            nomeadc.innerHTML = (nomes[nomesort.value]);
+            
+            
+        }
+        
+        
+    </script>
+
+
+<script>
+    //let numeros = new Array ();
+        //numeros = [10,20,30,40];
+        //let numeroAleatorio = Math.floor(Math.random() * numeros.length);
+        //document.write(numeros[numeroAleatorio]);
+</script>
+</body>
+</html>
