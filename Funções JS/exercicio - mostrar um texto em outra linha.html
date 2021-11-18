@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Atividade</h1>
+    <input id="fruta"><button type="button" onclick="envio()">Para primeira linha</button>
+    <input id="fruta2"><button type="button" onclick="envio2()">Para primeira linha</button>
+    <p>Primeira linha:
+        <normal id="resfruta">
+    </p>
+    <p>Segunda linha:
+        <normal id="resfruta2">
+    </p>
+<script>
+    let vet = new Array();
+    let vet2 = new Array();
+    let valorfruta = document.getElementById("fruta");
+    let valorfruta2 = document.getElementById("fruta2");
+
+    function envio() {
+        vet.push(valorfruta.value);
+        document.getElementById("resfruta").innerHTML = vet;
+    }
+    function envio2() {
+        vet2.push(valorfruta2.value);
+        document.getElementById("resfruta2").innerHTML = vet2;
+    }
+</script>
+</body>
+</html>

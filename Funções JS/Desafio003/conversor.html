@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Moedas</title>
+</head>
+<body>
+    <h1>Conversor de moedas</h1>
+    <normal>R$</normal> <input type="number" name="" id="valordigitado" placeholder="Real"> <button type="button" id="real" onclick="ConvReal()">Converter para dólar</button><br><br> 
+    <normal>$ </normal><input type="number" id="valordigitado2" placeholder="Dólar"> <button type="button" id="dolar" onclick="ConvDolar()">Converter para real</button>
+    <script>
+        function ConvReal(){
+            let valor_digitado = parseFloat(document.getElementById("valordigitado").value);
+            let convertido_dolar = parseFloat((1 * valor_digitado)/5.54);
+            document.getElementById("valordigitado2").value = document.getElementById("valordigitado2").innerHTML = convertido_dolar;
+        }
+        function ConvDolar(){
+            let  valordigitado2 = parseFloat(document.getElementById("valordigitado2").value);
+            let convertido_real = parseFloat((5.54 * valordigitado2));
+            document.getElementById("valordigitado").value = document.getElementById("valordigitado").innerHTML = convertido_real;
+        }
+    </script>
+</body>
+</html>

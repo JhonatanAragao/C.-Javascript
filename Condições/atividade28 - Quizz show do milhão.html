@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var pergunta; 
+        var pergunta2;
+        var pergunta3;
+        var a = 0;
+        var pontos = 0
+        while (a < 3){
+            pergunta = prompt("Qual o bicho que transmite a doença de chagas?\nA- Abelha\nB - Barata\nC - Pulga\nD - Barbeio").toLocaleLowerCase();
+            
+            if (pergunta == "d"){
+                alert("Resposta correta!");
+                alert("Você tem 1 ponto\nPassando para próxima pergunta...");
+                a =  3;
+                pontos += 1;
+            }
+            else {
+                alert("Ops... Resposta errada!")
+            }
+            a += 1
+        }
+        pergunta2 = prompt("Pergunta número 2:\nQual o coletivo de cães?\nA- Matilha\nB- Rebanho\nC- Alcateia\nD- Manada").toLocaleLowerCase();
+        if (pergunta2  == "a"){
+            alert("Resposta correta!");
+            alert("Você tem 2 pontos\nPassando para próxima pergunta...");
+            pontos += 1;
+        } 
+        else {
+            alert("Ops... Resposta errada!")
+        }
+        pergunta3 = prompt("Pergunta número 3:\nQual o triângulo que possui todos os lados diferentes?\nA- Equilátero\nB- Isóceles\nC- Escaleno\nD- Trapézio").toLocaleLowerCase();
+        if (pergunta3  == "c"){
+            alert("Resposta correta!");
+            pontos += 1;
+        }
+        else {
+            alert("Ops... Resposta errada!")
+        }
+        alert(`Resultado final:\nVocê conseguiu obter ${pontos} pontos no Quiiz. Parabêns!`)
+        
+
+    </script>
+</body>
+</html>
