@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Web</title>
+    <link rel="stylesheet" href="calculadora2.css">
+</head>
+<body>
+    <fieldset>
+        <div id="animacao"><h1><i>Calculadora</i></h1></div> 
+        <div id="horaatual"></div>
+    </fieldset>
+   <div id="corpo">
+       
+       <table>
+        <input id="caixa1" type="number" placeholder="0" id="inputnumber">
+           <tr>
+               <td><button>%</button></td>
+               <td><button>CE</button></td>
+               <td><button>C</button></td>
+               <td><button type="button">Del</button></td>
+           </tr>
+           <tr>
+               <td><button onmouseenter="passou()" id="but">1/x</button></td>
+               <td><button>x²</button></td>
+               <td><button>²√x</button></td>
+               <td><button>/</button></td>
+           </tr>
+           <tr>
+                <td><button>7</button></td>
+                <td><button>8</button></td>
+                <td><button>9</button></td>
+                <td><button>x</button></td>
+           </tr>
+           <tr>
+               <td><button>4</button></td>
+               <td><button>5</button></td>
+               <td><button>6</button></td>
+               <td><button>-</button></td>
+           </tr>
+           <tr>
+               <td><button>1</button></td>
+               <td><button>2</button></td>
+               <td><button>3</button></td>
+               <td><button>+</button></td>
+           </tr>
+           <tr>
+               <td><button>+/-</button></td>
+               <td><button>0</button></td>
+               <td><button>,</button></td>
+               <td><button id="igual">=</button></td>
+           </tr>
+       </table>
+   </div>
+
+    <script>
+        //data
+        var data = new Date();
+        var hora = data.getHours();
+        var minutos = data.getMinutes();
+        var dia = new Array('Domingo','Segunda','Terça', 'Quarta','Quinta','Sexta','Sábado');
+        var mes = new Array('Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro');
+        //fimdata
+        document.getElementById("horaatual").innerHTML = `${hora}h${minutos} - ${dia[data.getDay()]}, ${data.getDate()} de ${mes[data.getMonth()]} de ${data.getFullYear()}`;
+
+        
+
+    </script>
+</body>
+</html>

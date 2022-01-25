@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso em Vídeo - Funções JS</title>
+</head>
+<h4 style="text-align: center;">Funções Curso em vídeo</h4>
+<body>
+    <script>
+    //     function parimpar(n){
+    //         if (n % 2 == 0){
+    //             return 'Par'
+    //         }
+    //         else {
+    //             return 'Ímpar'
+    //         }
+    //     };
+ 
+    //    // document.write(parimpar(window.prompt("Digite um número: ")));
+    //    function twonumbers(eninho,enao){
+    //        if (eninho + enao > 20){
+    //            res = "O resultado é maior que 20!";
+    //            return res;
+    //        }
+    //        else if (eninho + enao < 5) {
+    //            res = "O resultado não chega nem a 5 heheh";
+    //            return res; 
+    //        }
+    //        else {
+    //            res = "O resultado da soma está entre 5 e 20 hihi";
+    //            return res;
+    //        }
+    //    }
+    //    document.write(twonumbers(parseInt(prompt("Digite o primeiro número:\n")), parseInt(prompt("Digite o segundo número:\n"))));
+
+    function fatorial(x){
+        let fat = 1;
+        for(let c = x; c > 1; c--){
+            fat *= c;
+        }
+        return fat
+    }
+    document.write(fatorial(5));
+    </script>
+</body>
+</html>

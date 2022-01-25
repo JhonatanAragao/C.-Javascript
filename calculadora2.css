@@ -1,0 +1,79 @@
+fieldset {
+    text-align: center;
+    font-size: larger;
+    background-color:darkslategrey;
+    color: white;
+    margin-bottom: 0%;
+    border-radius: 10px;
+}
+body{
+    background-color: black;
+}
+table{
+    color: white;
+    font-size: 50pt;
+}
+td{
+    text-align: center;   
+}
+button{
+    height: auto;
+    width: 2em;
+    font-size: 50pt;
+    
+}
+
+/**DIV's**/
+@keyframes teste {
+    0%   {background-color: red; left: 50px; }
+    25%  {background-color: yellow; left: 150px; }
+    50%  {background-color: blue; left: 700px; }
+    100% {background-color: green; left: 0px; }
+}
+@keyframes teste2 {
+    0%   {background-color: rgb(53, 145, 231); left: 75px; }
+    25%  {background-color: rgba(118, 24, 240, 0.616); left: 200px; }
+    50%  {background-color: rgb(128, 6, 46); left: 450px; }
+    75%  {background-color:rgb(128, 6, 46); left: 200px;}
+    100% {background-color: rgb(61, 87, 0); left: 0px; }
+}
+#horaatual{
+    text-align: left;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    animation-name: teste2;
+    animation-delay: 4s;
+    animation-duration:10s;
+    position: relative;
+    background-color: rgb(23, 100, 201);
+    width: 300px;
+    border-radius: 20px;  
+}
+#animacao {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+    width: 210px;
+    height: auto;
+    position: relative;
+    animation-name: teste;
+    animation-duration: 7s;
+    animation-delay: 2s;
+    background-color: rgb(23, 100, 201);
+    border-radius: 10px;
+}
+#corpo{
+    margin-left:28%;
+    margin-top: 7%;
+}
+#caixa1{
+    width: 8.1em;
+    height: auto;
+    font-size: 50pt;
+}
+#igual{
+    background-color: #72a2c8;
+}
+/**teste de animação css**/
+
+
+
+
+
