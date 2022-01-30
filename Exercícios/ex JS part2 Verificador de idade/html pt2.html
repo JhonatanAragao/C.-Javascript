@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de exercício</title>
+    <link rel="stylesheet" href="estiloPT2.css">
+</head>
+<body>
+    <header>
+        <h1>Verificador de Idade</h1>
+    </header>
+    <section>
+        <div>
+            Ano de nascimento: <input type="number" id="nascimento">
+            <form id="form"><p>Sexo: <input type="radio" name="sexo" value="M"> Masculino <input type="radio" name="sexo" value="F"> Feminino</p></form>
+            <p><button onclick="verificar()">Verificar</button></p>
+        </div>
+        <div id="resultado">
+            <p id="msg">Preencha os dados acima para ver o resultado!</p>
+            <img id="photo">
+        </div>
+    </section>
+    <footer>
+        <p>&copy; JhonatanAragão</p>
+    </footer>
+    <script src="scriptPT2.js"></script>
+</body>
+</html>
